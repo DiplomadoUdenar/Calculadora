@@ -133,4 +133,14 @@ function myFunction_set(val) {
   
 }
 
+function temperatura(){
+    if(result.value == ""){
+        result.value = 32;
+        return;
+    }
+
+    result.value = (result.value * 9/5) + 32;
+        
+}
+
 
