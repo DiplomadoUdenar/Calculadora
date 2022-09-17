@@ -6,7 +6,7 @@
 
 // obtener el elemento de resultado
 let result  = document.getElementById("result");
-let pag_home = location.href;
+
 
 // Ingresar números por tecla presionada
 function input(num){
@@ -136,13 +136,12 @@ function temperatura(){
 }
 
 function home(){
-    window.location.assign(pag_home);
+    window.location.href="../index.html";
+    
 }
 
-function masa(){
-    //alert ('Valor origin: '+ pag_home);
-    window.location.href="Vistas/masa.html";
-    //window.location.assign("https://www.delftstack.com");
+function masa(){    
+    window.location.href="Vistas/masa.html";    
 }
 
 

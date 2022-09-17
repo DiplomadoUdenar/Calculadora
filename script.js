@@ -148,10 +148,8 @@ function home(){
     window.location.assign(pag_home);
 }
 
-function masa(){
-    //alert ('Valor origin: '+ pag_home);
-    window.location.href="Vistas/masa.html";
-    //window.location.assign("https://www.delftstack.com");
+function masa(){    
+    window.location.href="Vistas/masa.html";    
 }
 
 
