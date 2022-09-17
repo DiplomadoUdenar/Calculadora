@@ -6,6 +6,7 @@
 
 // obtener el elemento de resultado
 let result  = document.getElementById("result");
+let result_der = document.getElementById("result_izq");
 
 
 // Ingresar números por tecla presionada
@@ -15,18 +16,20 @@ function input(num){
 }
 
 // Lógica de la calculadora
-function calc(){
+function calc(){       
     if(result.value != ""){
         let result2  = result.value;
         result.value = eval(result2)
     } else{
         alert("Error! Ingrese valores válidos.")
     }
+    result_der.value = result.value * 1000;
 }
 
 // boton de reset
 function reset(){
     result.value = "";
+    result_der.value = "";
 }
 
 // boton de borrado 
