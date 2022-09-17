@@ -223,4 +223,8 @@ input[type=range]::-ms-thumb {
     width: 100%;
 }
 
+.special-buttons{
+    font-size: 10px;
+}
+
 /* ======================= Theme 2 ======================= */

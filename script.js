@@ -1,19 +1,19 @@
 /*
     ====================================================
-    ================= CALCULATOR LOGIC =================
+    =========== LÓGICA DE LA CALCULADORA ===============
     ====================================================
 */ 
 
-// get the result element
+// obtener el elemento de resultado
 let result  = document.getElementById("result");
 
-// Input numbers by key pressed
+// Ingresar números por tecla presionada
 function input(num){
     let number = result.value;
     result.value = number + num;
 }
 
-// Calculator logic
+// Lógica de la calculadora
 function calc(){
     if(result.value != ""){
         let result2  = result.value;
@@ -23,12 +23,12 @@ function calc(){
     }
 }
 
-// Reset button
+// boton de reset
 function reset(){
     result.value = "";
 }
 
-// Del button
+// boton de borrado 
 function del(){
     let result2  = result.value;
     result.value = result2.substring(0, result2.length - 1);
@@ -36,7 +36,7 @@ function del(){
 
 /*
     ====================================================
-    =================== TOGGLE THEME ===================
+    =================== CAMBIAR TEMA ===================
     ====================================================
 */
 
@@ -131,6 +131,16 @@ function myFunction_set(val) {
         theme.dark();
     } 
   
+}
+
+function temperatura(){
+    if(result.value == ""){
+        result.value = 32;
+        return;
+    }
+
+    result.value = (result.value * 9/5) + 32;
+        
 }
 
 
