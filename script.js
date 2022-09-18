@@ -154,3 +154,9 @@ function masa(){
 
 
 
+function longitud(){
+    if(result.value != ""){
+        result.value = result.value * 100;
+    }
+}
+
