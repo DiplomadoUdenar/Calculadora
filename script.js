@@ -103,16 +103,6 @@ const darkThemeMq  = window.matchMedia("(prefers-color-scheme: dark)");
 const lightThemeMq = window.matchMedia("(prefers-color-scheme: light)");
 
 // changing the theme with the results above
-if (darkThemeMq.matches) {
-    document.getElementById('btnTheme').value = "3";
-    theme.dark();
-} else if(lightThemeMq.matches){
-    document.getElementById('btnTheme').value = "2";
-    theme.light();    
-} else {
-    document.getElementById('btnTheme').value = "1";
-    theme.defaul();    
-}
 
 // Create a function for recive the value of range input
 function myFunction_set(val) {
@@ -150,6 +140,10 @@ function home(){
 
 function masa(){    
     window.location.href="Vistas/masa.html";    
+}
+
+function presion(){    
+    window.location.href="Vistas/presion.html";    
 }
 
 
