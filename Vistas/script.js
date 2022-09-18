@@ -26,6 +26,16 @@ function calc(){
     result_der.value = result.value * 1000;
 }
 
+function calcpresion(){       
+    if(result.value != ""){
+        let result2  = result.value;
+        result.value = eval(result2)
+    } else{
+        alert("Error! Ingrese valores válidos.")
+    }
+    result_der.value = result.value / 100000;
+}
+
 // boton de reset
 function reset(){
     result.value = "";
@@ -107,11 +117,11 @@ const lightThemeMq = window.matchMedia("(prefers-color-scheme: light)");
 
 // changing the theme with the results above
 
-
 // Create a function for recive the value of range input
-function myFunction_set(val =1) {
+function myFunction_set_theme(val = valtheme) {
     // receiving the input type range value
     //document.getElementById('btnTheme').value = val; 
+    document.getElementById('btnTheme2').value = val; 
 
     // changing the theme with the results above
     if(val == 1){
@@ -125,7 +135,7 @@ function myFunction_set(val =1) {
     else{
         theme.dark();
     } 
-  
+
 }
 
 function temperatura(){
