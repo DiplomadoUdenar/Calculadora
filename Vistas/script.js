@@ -6,7 +6,8 @@
 
 // obtener el elemento de resultado
 let result  = document.getElementById("result");
-let pag_home = location.href;
+let result_der = document.getElementById("result_izq");
+
 
 // Ingresar números por tecla presionada
 function input(num){
@@ -15,18 +16,30 @@ function input(num){
 }
 
 // Lógica de la calculadora
-function calc(){
+function calc(){       
     if(result.value != ""){
         let result2  = result.value;
         result.value = eval(result2)
     } else{
         alert("Error! Ingrese valores válidos.")
     }
+    result_der.value = result.value * 1000;
+}
+
+function calcpresion(){       
+    if(result.value != ""){
+        let result2  = result.value;
+        result.value = eval(result2)
+    } else{
+        alert("Error! Ingrese valores válidos.")
+    }
+    result_der.value = result.value / 100000;
 }
 
 // boton de reset
 function reset(){
     result.value = "";
+    result_der.value = "";
 }
 
 // boton de borrado 
@@ -105,9 +118,10 @@ const lightThemeMq = window.matchMedia("(prefers-color-scheme: light)");
 // changing the theme with the results above
 
 // Create a function for recive the value of range input
-function myFunction_set(val) {
+function myFunction_set_theme(val = valtheme) {
     // receiving the input type range value
-    document.getElementById('btnTheme').value = val; 
+    //document.getElementById('btnTheme').value = val; 
+    document.getElementById('btnTheme2').value = val; 
 
     // changing the theme with the results above
     if(val == 1){
@@ -121,7 +135,7 @@ function myFunction_set(val) {
     else{
         theme.dark();
     } 
-  
+
 }
 
 function temperatura(){
@@ -135,22 +149,13 @@ function temperatura(){
 }
 
 function home(){
-    window.location.assign(pag_home);
+    window.location.href="../index.html";
+    
 }
 
 function masa(){    
     window.location.href="Vistas/masa.html";    
 }
 
-function presion(){    
-    window.location.href="Vistas/presion.html";    
-}
 
-
-
-function longitud(){
-    if(result.value != ""){
-        result.value = result.value * 100;
-    }
-}
 
